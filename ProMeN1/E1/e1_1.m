@@ -13,6 +13,7 @@ for r=2:9
     E=[E; abs(sol(Tf) - Yrk4(end))];
     H=[H;(Tf-Ti)/N];
 end
+printf("RK");
 [Yrk4,H,E]
 
 # Metodo de Heun
@@ -24,4 +25,5 @@ for r=2:9
     E=[E; abs(sol(Tf) - Yheun(end))];
     H=[H;(Tf-Ti)/N];
 end
+printf("Heun");
 [Yheun,H,E]

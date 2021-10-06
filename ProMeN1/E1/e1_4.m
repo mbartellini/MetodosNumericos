@@ -7,13 +7,13 @@ sol=@(t) (-4 + exp(t))*(1+t)^-2;
 
 [tode45, yode45]=ode45(f, TRANGE, Yi, ErrGlobal);
 figure(1)
-plot(tode45, yode45,'-o');
+plot(tode45, yode45,'-o', "linewidth", 2);
 grid on;
 xlabel("t");
 ylabel("Aproximación de ode45 según método de Dormand-Prince");
 
 figure(2)
-plot(tode45,'-o');
+plot(tode45,'-o', "linewidth", 2);
 grid on;
 xlabel("i")
 ylabel("t_i");
@@ -21,7 +21,7 @@ ylabel("t_i");
 max(diff(tode45))
 min(diff(tode45))
 figure(3)
-plot(diff(tode45));
+plot(diff(tode45), "linewidth", 2);
 grid on;
 xlabel("i");
 ylabel("h_i");

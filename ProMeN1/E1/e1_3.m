@@ -23,7 +23,6 @@ for r=2:9
 end
 figure(1)
 loglog(H,Erk4,"-x;Runge-Kutta;",H,Eheun,"-o;Heun;")
-grid;
 xlabel("Paso h");ylabel("Error global en Tf");
 legend ("location", "southeast");
 
